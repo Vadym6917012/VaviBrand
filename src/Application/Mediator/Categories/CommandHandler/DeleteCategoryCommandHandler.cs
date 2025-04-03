@@ -1,7 +1,4 @@
-﻿using Application.Common.Interfaces;
-using Application.Mediator.Categories.Commands;
-using Domain.Entities;
-using MediatR;
+﻿using Application.Mediator.Categories.Commands;
 
 namespace Application.Mediator.Categories.CommandHandler
 {

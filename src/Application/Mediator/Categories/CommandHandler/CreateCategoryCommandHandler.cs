@@ -1,9 +1,5 @@
-﻿using Application.Common.Interfaces;
-using Application.DTOs;
-using Application.Mediator.Categories.Commands;
+﻿using Application.Mediator.Categories.Commands;
 using AutoMapper;
-using Domain.Entities;
-using MediatR;
 
 namespace Application.Mediator.Categories.CommandHandler
 {

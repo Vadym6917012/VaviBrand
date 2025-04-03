@@ -1,6 +1,4 @@
-﻿using Application.Common.Interfaces;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Application.Common.Behaviors
 {

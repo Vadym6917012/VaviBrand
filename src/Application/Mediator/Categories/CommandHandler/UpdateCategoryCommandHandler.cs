@@ -1,14 +1,5 @@
-﻿using Application.Common.Interfaces;
-using Application.DTOs;
-using Application.Mediator.Categories.Commands;
+﻿using Application.Mediator.Categories.Commands;
 using AutoMapper;
-using Domain.Entities;
-using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Mediator.Categories.CommandHandler
 {
@@ -26,7 +17,7 @@ namespace Application.Mediator.Categories.CommandHandler
         public async Task<CategoryDto> Handle(UpdateCategoryCommand request, CancellationToken cancellationToken)
         {
             var category = await _unitOfWork.Repository<Category>().GetByIdAsync(request.Id);
-            if (category == null )
+            if ( category == null )
             {
                 return null;
             }
@@ -34,7 +25,7 @@ namespace Application.Mediator.Categories.CommandHandler
             _mapper.Map(request, category);
             _unitOfWork.Repository<Category>().Update(category);
             await _unitOfWork.SaveChangesAsync();
-            
+
             return _mapper.Map<CategoryDto>(category);
         }
     }

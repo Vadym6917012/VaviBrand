@@ -16,6 +16,17 @@ namespace Web.Controllers
             _mediator = mediator;
         }
 
+        [HttpGet("get-category/{id}")]
+        public async Task<IActionResult> GetCategory(int id)
+        {
+            var category = await _mediator.Send(new GetCategoryQuery { Id = id });
+            if ( category == null )
+            {
+                return NotFound(new { message = "Категорія не знайдена" });
+            }
+            return Ok(category);
+        }
+
         [HttpGet("get-all-categories")]
         public async Task<IActionResult> GetAllCategories()
         {
@@ -34,7 +45,7 @@ namespace Web.Controllers
         public async Task<IActionResult> DeleteCategory(int id)
         {
             var result = await _mediator.Send(new DeleteCategoryCommand { Id = id });
-            if (!result )
+            if ( !result )
             {
                 return NotFound(new { message = "Категорія не знайдена" });
             }

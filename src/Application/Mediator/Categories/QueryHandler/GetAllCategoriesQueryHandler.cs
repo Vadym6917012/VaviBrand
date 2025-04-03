@@ -1,9 +1,5 @@
-﻿using Application.Common.Interfaces;
-using Application.DTOs;
-using Application.Mediator.Categories.Queries;
+﻿using Application.Mediator.Categories.Queries;
 using AutoMapper;
-using Domain.Entities;
-using MediatR;
 
 namespace Application.Mediator.Categories.QueryHandler
 {

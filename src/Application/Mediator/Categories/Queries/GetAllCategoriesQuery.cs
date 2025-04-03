@@ -1,8 +1,4 @@
-﻿using Application.DTOs;
-using Domain.Entities;
-using MediatR;
-
-namespace Application.Mediator.Categories.Queries
+﻿namespace Application.Mediator.Categories.Queries
 {
     public class GetAllCategoriesQuery : IRequest<IEnumerable<CategoryDto>>
     {
