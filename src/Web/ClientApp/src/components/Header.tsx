@@ -105,7 +105,7 @@ export default function Header({ onSearchToggle }: HeaderProps) {
             <div className="col-3 col-lg-auto">
               <ul className="list-unstyled d-flex m-0">
               <li className="account-box">
-                  <Link to="index.html" className="text-uppercase mx-2">
+                  <Link to="login" className="text-uppercase mx-2">
                   <i className="bi bi-person"></i>
                   </Link>
                 </li>
